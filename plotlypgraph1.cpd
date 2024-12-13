@@ -1,0 +1,35 @@
+ '<script src="https://cdn.plot.ly/plotly-2.26.0.min.js" charset="utf-8"></script>
+#def PlotlyFancyGraph$
+	#val
+	'<h4>The Famous Pieramid Chart</h4>
+	'<p style="text-align: center; font-family: Arial, sans-serif; font-size: 40px; color: black;">
+	'0 = sky<br >
+	'1 = sky <br > 
+	'2 = sunny side <br>
+	'3 = shady side<br>
+	'</p> 
+	'<div id="plot"></div>
+	#hide
+	values = [18; 18; 9; 3]
+	#post
+	'<script>
+	'const values = 'values';
+	'var layout = {
+	'    autosize: false,
+	'    width: 1400,
+	'    height: 1000,
+	'    showlegend: true,
+	'    legend: {
+	'        font: {
+	'            size: 35 
+	'        }
+	'    }
+	'}; 
+	'var data = [
+	'    {values: values, type: "pie", hole: 0.0, marker: {colors: ["lightblue", "lightblue", "yellow", "gold"]}, textinfo: "none"}
+	']; 
+	'Plotly.newPlot("plot", data, layout);
+	'</script>
+	#equ
+#end def
+PlotlyFancyGraph$
